@@ -67,17 +67,16 @@ class CustomNavbar extends HTMLElement {
                     width: 100%;
                 }
                 
-                .mobile-menu-button {
-                    display: none;
-                    background: none;
-                    border: none;
-                    color: white;
-                    cursor: pointer;
-                }
+                <button class="mobile-menu-button" aria-label="Open menu">
+  <svg width="28" height="28" viewBox="0 0 24 24"
+       fill="none" stroke="white" stroke-width="2"
+       stroke-linecap="round" stroke-linejoin="round">
+    <line x1="3" y1="12" x2="21" y2="12"></line>
+    <line x1="3" y1="6"  x2="21" y2="6"></line>
+    <line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</button>
 
-                .mobile-menu-button svg {
-    stroke: #ffffff;
-}
 
                 
                 @media (max-width: 768px) {
@@ -148,5 +147,6 @@ this.shadowRoot.querySelectorAll(".nav-link").forEach(link => {
         });
     }
 }
+
 
 customElements.define('custom-navbar', CustomNavbar);
