@@ -5,7 +5,7 @@ class CustomNavbar extends HTMLElement {
             <style>
                 :host {
                     display: block;
-                    position: fixed;
+                    position: relative;
                     top: 0;
                     left: 0;
                     right: 0;
@@ -74,6 +74,11 @@ class CustomNavbar extends HTMLElement {
                     color: white;
                     cursor: pointer;
                 }
+
+                .mobile-menu-button svg {
+    stroke: #ffffff;
+}
+
                 
                 @media (max-width: 768px) {
                     .nav-links {
