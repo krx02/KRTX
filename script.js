@@ -41,5 +41,17 @@ document.addEventListener("DOMContentLoaded", function () {
             lightbox.classList.remove("flex");
         };
     }
+const current = window.location.pathname.split("/").pop();
+
+this.shadowRoot.querySelectorAll(".nav-link").forEach(link => {
+    const href = link.getAttribute("href");
+
+    if (
+        (current === "" || current === "index.html") && href === "index.html" ||
+        current === "portfolio.html" && href === "portfolio.html"
+    ) {
+        link.classList.add("active");
+    }
+});
 
 });

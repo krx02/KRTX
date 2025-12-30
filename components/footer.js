@@ -109,34 +109,14 @@ class CustomFooter extends HTMLElement {
             
             <div class="footer-container">
                 <div class="footer-grid">
-                    <div>
-                        <div class="footer-logo">KRTX</div>
-                        <p class="footer-description">
-                            We build digital experiences that help businesses grow and thrive in the modern world.
-                        </p>
-                        <div class="social-links">
-                            <a href="#" class="social-link">
-                                <i data-feather="twitter"></i>
-                            </a>
-                            <a href="#" class="social-link">
-                                <i data-feather="instagram"></i>
-                            </a>
-                            <a href="#" class="social-link">
-                                <i data-feather="linkedin"></i>
-                            </a>
-                            <a href="#" class="social-link">
-                                <i data-feather="dribbble"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
+
                     <div>
                         <h3 class="footer-heading">Services</h3>
                         <div class="footer-links">
-                            <a href="#" class="footer-link">Website Design</a>
-                            <a href="#" class="footer-link">Brand Identity</a>
-                            <a href="#" class="footer-link">Digital Marketing</a>
-                            <a href="#" class="footer-link">Content Creation</a>
+                            <span href="#" class="footer-link">Website Design</span>
+                            <span href="#" class="footer-link">Brand Identity</span>
+                            <span href="#" class="footer-link">Digital Marketing</span>
+                            <span href="#" class="footer-link">Content Creation</span>
                         </div>
                     </div>
                     
@@ -153,9 +133,8 @@ class CustomFooter extends HTMLElement {
                     <div>
                         <h3 class="footer-heading">Contact</h3>
                         <div class="footer-links">
-                            <a href="mailto:hello@krtx.com" class="footer-link">hello@krtx.com</a>
-                            <a href="tel:+1234567890" class="footer-link">+1 (234) 567-890</a>
-                            <div class="footer-link">123 Digital Street<br>Tech City, TC 10001</div>
+                            <a href="tel:+918369013101" class="footer-link">+91 83690 13101</a>
+                    
                         </div>
                     </div>
                 </div>

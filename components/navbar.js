@@ -87,24 +87,35 @@ class CustomNavbar extends HTMLElement {
             </style>
             
             <div class="navbar-container">
-                <a href="#" class="logo">KRTX</a>
+                <a href="#" class="logo">KRTX AGENCY</a>
                 
                 <div class="nav-links">
-                    <a href="#services" class="nav-link">Services</a>
-                    <a href="#portfolio" class="nav-link">Work</a>
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#contact" class="nav-link">Contact</a>
-                    <a href="#contact" class="px-4 py-2 bg-gradient-to-r from-cyberblue to-cyberpurple text-dark font-bold rounded-full hover:shadow-lg hover:shadow-cyberblue/30 transition-all duration-300">
-                        Get Started
-                    </a>
-                </div>
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="index.html#services" class="nav-link">Services</a>
+    <a href="portfolio.html" class="nav-link">Work</a>
+    <a href="index.html#about" class="nav-link">About</a>
+    <a href="index.html#contact" class="nav-link">Contact</a>
+</div>
+
                 
                 <button class="mobile-menu-button">
                     <i data-feather="menu"></i>
                 </button>
             </div>
         `;
-        
+        const current = window.location.pathname.split("/").pop();
+
+this.shadowRoot.querySelectorAll(".nav-link").forEach(link => {
+    const href = link.getAttribute("href");
+
+    if (
+        (current === "" || current === "index.html") && href === "index.html" ||
+        current === "portfolio.html" && href === "portfolio.html"
+    ) {
+        link.classList.add("active");
+    }
+});
+
         // Initialize feather icons
         if (window.feather) {
             window.feather.replace();

@@ -6,6 +6,8 @@
 <title>Portfolio | KRTX Agency</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="components/navbar.js" defer></script>
+<script src="components/footer.js" defer></script>
 
 <script>
 tailwind.config = {
@@ -25,6 +27,7 @@ tailwind.config = {
 </head>
 
 <body class="bg-dark text-gray-200 overflow-x-hidden">
+<custom-navbar></custom-navbar>
 
 <!-- GLOW BACKGROUND -->
 <div class="fixed inset-0 -z-10">
@@ -96,6 +99,7 @@ fetch("assets/portfolio/images.json")
     };
   });
 </script>
+<custom-footer></custom-footer>
 
 </body>
 </html>
