@@ -8,6 +8,34 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+<style>
+  img {
+    -webkit-touch-callout: none; /* iOS */
+    -webkit-user-select: none;
+    user-select: none;
+    pointer-events: none; /* IMPORTANT */
+  }
+
+  /* Re-enable clicks ONLY where needed (lightbox open) */
+  #portfolioGrid img {
+    pointer-events: auto;
+  }
+</style>
+
+<script>
+  // Disable right click
+  document.addEventListener('contextmenu', e => e.preventDefault());
+
+  // Disable drag
+  document.addEventListener('dragstart', e => e.preventDefault());
+
+  // Disable text/image selection
+  document.addEventListener('selectstart', e => e.preventDefault());
+</script>
+
+
+    
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -352,4 +380,5 @@
 
 
 </body>
+
 </html>
