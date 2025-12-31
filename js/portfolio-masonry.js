@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  fetch("assets/images.json")
+  fetch(`assets/images.json?v=${Date.now()}`)
     .then(res => res.json())
     .then(images => {
 
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
 
         card.innerHTML = `
-          <img src="assets/portfolio/${file}"
+          <img src="assets/portfolio/${file}?v=${Date.now()}"
                class="w-full h-auto object-contain
                       transition-transform duration-500
                       hover:scale-[1.03]">
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         card.onclick = () => {
           lightbox.classList.remove("hidden");
           lightbox.classList.add("flex");
-          lightboxImg.src = `assets/portfolio/${file}`;
+          lightboxImg.src = `assets/portfolio/${file}?v=${Date.now()}`;
         };
 
         grid.appendChild(card);
