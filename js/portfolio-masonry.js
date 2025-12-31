@@ -10,6 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (!grid) return;
 
+      // 🔀 SHUFFLE IMAGES (Fisher–Yates)
+      for (let i = images.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [images[i], images[j]] = [images[j], images[i]];
+      }
+
       images.forEach(file => {
         const card = document.createElement("div");
         card.className = `
@@ -44,6 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
         lightbox.classList.remove("flex");
       };
 
-    });
+    })
+    .catch(err => console.error("Portfolio load failed:", err));
 
 });
