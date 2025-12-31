@@ -4,10 +4,33 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio | KRTX Agency</title>
+<style>
+  img {
+    -webkit-touch-callout: none; /* iOS */
+    -webkit-user-select: none;
+    user-select: none;
+    pointer-events: none; /* IMPORTANT */
+  }
+
+  /* Re-enable clicks ONLY where needed (lightbox open) */
+  #portfolioGrid img {
+    pointer-events: auto;
+  }
+</style>
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="components/navbar.js" defer></script>
 <script src="components/footer.js" defer></script>
+<script>
+  // Disable right click
+  document.addEventListener('contextmenu', e => e.preventDefault());
+
+  // Disable drag
+  document.addEventListener('dragstart', e => e.preventDefault());
+
+  // Disable text/image selection
+  document.addEventListener('selectstart', e => e.preventDefault());
+</script>
 
 <script>
 tailwind.config = {
