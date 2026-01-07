@@ -140,4 +140,7 @@ class CustomNavbar extends HTMLElement {
   }
 }
 
-customElements.define('custom-navbar', CustomNavbar);
+if (!customElements.get('custom-navbar')) {
+  customElements.define('custom-navbar', CustomNavbar);
+}
+
