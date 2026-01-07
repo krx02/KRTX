@@ -5,14 +5,13 @@ class CustomNavbar extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <style>
         :host {
-          display: block;
-          position: sticky;
-          top: 0;
-          z-index: 1000;
-          backdrop-filter: blur(10px);
-          background-color: rgba(10, 10, 10, 0.8);
-          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
+  display: block;
+  position: relative; /* or just remove position entirely */
+  backdrop-filter: blur(10px);
+  background-color: rgba(10, 10, 10, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 
         .navbar-container {
           max-width: 1200px;
@@ -115,6 +114,7 @@ class CustomNavbar extends HTMLElement {
           <a href="index.html" class="nav-link">Home</a>
           <a href="index.html#services" class="nav-link">Services</a>
           <a href="portfolio.html" class="nav-link">Work</a>
+          <a href="websites.html" class="nav-link">Websites</a>
           <a href="index.html#about" class="nav-link">About</a>
           <a href="index.html#contact" class="nav-link">Contact</a>
         </nav>
