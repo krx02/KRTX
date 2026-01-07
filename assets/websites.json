@@ -1,0 +1,12 @@
+[
+  {
+    "title": "GYM WEBSITE",
+    "mobile": "assets/images/gym-mobile.png",
+    "desktop": "assets/images/gym-pc.png"
+  },
+  {
+    "title": "ASTROLOGY WEBSITE",
+    "mobile": "assets/images/cake-shop-mobile.png",
+    "desktop": "assets/images/cake-shop-pc.png"
+  }
+]
