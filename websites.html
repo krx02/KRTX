@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Website Showcase</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="components/navbar.js" defer></script>
+<script src="components/footer.js" defer></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        midnight: '#0f172a',
+        charcoal: '#1e293b',
+        gold: '#d4a017'
+      }
+    }
+  }
+}
+</script>
+
+<style>
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+</style>
+</head>
+
+<body class="bg-midnight text-white h-screen overflow-hidden">
+
+<!-- VIEWER -->
+<main id="viewer" class="h-full overflow-y-auto pb-28 hide-scrollbar">
+<custom-navbar></custom-navbar>
+  <img id="showcaseImage"
+       class="w-full object-cover block"
+       alt="">
+</main>
+
+<!-- BOTTOM NAV -->
+<nav class="fixed bottom-0 left-0 right-0 bg-charcoal border-t border-white/10">
+  <div class="max-w-4xl mx-auto px-4 py-3">
+
+    <!-- Title + Toggle -->
+    <div class="flex items-center justify-center gap-4 mb-2">
+      <span id="showcaseTitle"
+            class="text-sm font-medium tracking-wide uppercase">
+        —
+      </span>
+
+      <!-- View Toggle -->
+      
+
+    </div>
+
+    <!-- Prev / Next -->
+    <div class="flex justify-between items-center">
+      <button id="prevBtn" class="text-gold text-2xl">←</button>
+      <div class="flex gap-2 bg-midnight rounded-full p-1">
+        <button id="mobileBtn"
+          class="px-3 py-1 text-xs rounded-full bg-gold text-midnight">
+          📱
+        </button>
+        <button id="desktopBtn"
+          class="px-3 py-1 text-xs rounded-full text-gold">
+          💻
+        </button>
+      </div>
+      <button id="nextBtn" class="text-gold text-2xl">→</button>
+    </div>
+
+  </div>
+</nav>
+
+<script src="js/websites.js"></script>
+</body>
+</html>
